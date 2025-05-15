@@ -1,0 +1,360 @@
+.activityClass {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    .activityBlock {
+        display:  flex;
+        .activityName {
+            position: fixed;
+            left: 19%;
+            bottom: 48%;
+            .activityMains{
+                
+            }
+            .neone {
+                font-family:consolas;
+                margin: 0; padding: 0;
+                position:absolute;
+                left: 50%;
+                bottom: 50%;
+                transform:translate(-50%,-50%);
+                font-size: 30px;
+                color:transparent;
+                text-transform:uppercase;                
+                width: 300px;
+            }
+            .neone span:nth-child(1){
+                position:absolute;
+                top:0; left:0; color: #fff;
+                transition:0.5s;
+                clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+                overflow:hidden;
+                width: 300px;
+            }
+            .neone:hover span:nth-child(1){
+                transform:translateY(-18px);
+            }
+            .neone span:nth-child(2){
+                position:absolute;
+                top:0; left:0; color: #fff;
+                transition:0.5s;
+                clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+                overflow:hidden;
+                width: 300px;
+            }
+            .neone:hover span:nth-child(2){
+                transform:translateY(18px);
+            }
+            .neone span:nth-child(3){
+                position:absolute;
+                top:50%; left: 0;
+                transform:translateY(-50%) scaleY(0);
+                width: 91%; color: #000;
+                background:#ff0;
+                font-size: 0.20em;
+                font-weight: 700;
+                letter-spacing:0.7em;
+                text-align:center;
+                padding-left: 10px; margin-left: 5px;
+                transition:0.5s;
+                width: 300px;
+            }
+            .neone:hover span:nth-child(3){
+                transform:translateY(-50%) scaleY(1);
+            }
+
+
+        }
+        .gifClass{
+            .gifImage{
+                max-width: 200px;
+                max-height: 300px;
+            }
+        }
+    }
+ 
+  
+    .timeClass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 200px;
+        .runningTime{
+            margin: 20px;
+            font-weight: 900;
+            color: #fff;
+            font-size: 32px;
+        }
+    }
+    .lastClass{
+        position: relative;
+        left: 32%;
+        width: 0;
+        height: 0;
+        z-index: 100;
+        .functions{
+            position: absolute;
+            width: 125px;
+            height: 125px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .functionClass {
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        margin-top: 65px;
+        .activityFunction{
+            display: flex;
+            
+            .functions{
+                max-width: 100px;
+                max-height: 100px;
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+        .done{
+            margin-right: -11px;
+        }
+    }
+}
+
+.neon-text {
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+
+@font-face {
+    font-family: 'TheFont';
+
+    /* Variable fonts like the one linked below allow for fine-tuned control over various font properties dynamically via CSS, such as weight ('wght'), width ('wdth'), etc. This link is where your web browser will download the font from. */
+    /* Insert the link to your custom variable font */
+    src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+    format('woff2');
+}
+
+
+.breathe-animation  {
+    font-family: 'TheFont';
+
+    /* The 'clamp()' function sets a flexible font size that will never go below a minimum value and never above a maximum value. The middle value is preferred, but it will shrink or grow based on the viewport dimensions. */
+    /* Adjusts font size based on content width and viewport height */
+    font-size: clamp(4vw, 4vw, 8vh);
+
+    /* Change this to set the text color */
+    color: black;
+
+    /* Center text horizontally */
+    text-align: center;
+
+    /* The 'animation' property applies the 'letter-breathe' keyframes to the element, making it animate over 3 seconds.'ease-in-out' makes the movement start and end slowly, and 'infinite' makes it repeat forever. */
+    /* Controls the animation (3s is the duration) */
+    animation: letter-breathe 6s ease-in-out infinite;
+}
+
+/* Keyframes define the sequence of styles that an element will go through during an animation. */
+@keyframes letter-breathe {
+
+    /* The 'from' and 'to' keyframes establish the initial and final states of the animation, respectively, using 'font-variation-settings'. This CSS property is used with variable fonts to adjust their weight ('wght'), width ('wdth'), etc., during the animation. */
+    from,
+    to {
+        /* Starting weight; adjust the numbers according to your specific font */
+        font-variation-settings: 'wght' 100;
+    }
+
+    /* At the midpoint (50%) of the animation, the font weight changes to 900. */
+    50% {
+        /* Ending weight; adjust the numbers according to your specific font */
+        font-variation-settings: 'wght' 900;
+    }
+}
+
+.text-shadows {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    font-family: bungee, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: calc(2rem + 5vw);
+    text-align: center;
+    margin: 0;
+    color: var(--color-primary);
+    animation: shadows 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+}
+:root {
+    --color-primary: #f6aca2;
+    --color-secondary: #f49b90;
+    --color-tertiary: #f28b7d;
+    --color-quaternary: #f07a6a;
+    --color-quinary: #ee6352;
+}
+
+@keyframes shadows {
+    0% {
+        text-shadow: none;
+    }
+    10% {
+        transform: translate(-3px, -3px);
+        text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    20% {
+        transform: translate(-6px, -6px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    30% {
+        transform: translate(-9px, -9px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    40% {
+        transform: translate(-12px, -12px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    50% {
+        transform: translate(-12px, -12px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    60% {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    70% {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    80% {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    90% {
+        text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+
+.shadow-dance-text {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
+    }
+}
+
+.button-52 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-52:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.button-52:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .button-52 {
+        padding: 13px 50px 13px;
+    }
+}
+
+
+.confetti {
+    width: 15px;
+    height: 15px;
+    background-color: #f2d74e;
+    position: absolute;
+    left: 50%;
+    animation: confetti 5s ease-in-out -2s infinite;
+    transform-origin: left top;
+}
+.confetti:nth-child(1) {
+    background-color: #f2d74e; left: 10%; animation-delay: 0;
+}
+.confetti:nth-child(2) {
+    background-color: #95c3de; left: 20%; animation-delay: -5s;
+}
+.confetti:nth-child(3) {
+    background-color: #ff9a91; left: 30%; animation-delay: -3s;
+}
+.confetti:nth-child(4) {
+    background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+}
+.confetti:nth-child(5) {
+    background-color: #95c3de; left: 50%; animation-delay: -4s;
+}
+.confetti:nth-child(6) {
+    background-color: #ff9a91; left: 60%; animation-delay: -6s;
+}
+.confetti:nth-child(7) {
+    background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+}
+.confetti:nth-child(8) {
+    background-color: #95c3de; left: 80%; animation-delay: -2s;
+}
+.confetti:nth-child(9) {
+    background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+}
+.confetti:nth-child(10) {
+    background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+}
+
+@keyframes confetti {
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+}
