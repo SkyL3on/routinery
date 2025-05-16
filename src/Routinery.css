@@ -266,6 +266,7 @@ body {
   justify-content: center;
   justify-items: center;
   justify-self: anchor-center;
+  align-items: center;
   margin-top: 50px;
   .routines {
     display: flex;
