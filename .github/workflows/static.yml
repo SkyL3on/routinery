@@ -41,4 +41,7 @@ jobs:
         id: deployment # Added an ID
         with:
           folder: build  # Using 'folder' instead of 'build-directory'
-          branch: gh-pages   # Correct property name.
+          branch: main   # Correct property name.
+          
+          
+        
