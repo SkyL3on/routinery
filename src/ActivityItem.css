@@ -7,19 +7,28 @@
         display:  flex;
         .activityName {
             position: fixed;
-            left: 19%;
-            bottom: 48%;
+            /*left: 19%;*/
+            /*bottom: 48%;*/
+            position: fixed;
+            left: 1%;
+            bottom: 54%;
+            min-width: 31%;
+            min-height: 30%;
+            background: black;
+            display: flex;
+            align-items: center;
+            border-radius: 20%;
             .activityMains{
                 
             }
             .neone {
                 font-family:consolas;
                 margin: 0; padding: 0;
-                position:absolute;
-                left: 50%;
-                bottom: 50%;
-                transform:translate(-50%,-50%);
-                font-size: 30px;
+                position:relative;
+                /*left: 50%;*/
+                /*bottom: 50%;*/
+                /*transform:translate(-50%,-50%);*/
+                font-size: 20px;
                 color:transparent;
                 text-transform:uppercase;                
                 width: 300px;
