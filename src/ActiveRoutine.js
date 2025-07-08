@@ -12,7 +12,7 @@ const ActiveRoutine = ( {activeRoutine= {}, resetActiveRoutine = () => {} } ) =>
     const timerRef = useRef(null);
     const [routine, setRoutine] = useState( activeRoutine );
     const [activateCelebration, setActivateCelebration] = useState( 0 );
-    const [ currentActivity,  setCurrentActivity ] = useState( routine.activity[currentActivityIndex])
+    const [ currentActivity,  setCurrentActivity ] = useState( (routine?.activity?.[currentActivityIndex]) ?? 0)
     //const currentActivity = routine.activity[currentActivityIndex];
 
    
@@ -139,10 +139,19 @@ const ActiveRoutine = ( {activeRoutine= {}, resetActiveRoutine = () => {} } ) =>
                 </div>
             ) : (
                 <div className="activeRoutine">
-                    <div className="routineName">{routine.routine}</div>
+                    <div className="routineName">
+                        
+                        <span className="tooltip">{routine.routine}<span className="tooltip-text">{currentActivity?.activityDescription ?? "Just Begin"}</span></span>
+                        {/*<span className="tooltip"*/}
+                        {/*      data-tooltip={currentActivity?.activityDescription ?? "Just Begin"}>?</span>*/}
+                    </div>
+                    {/*<div id="anim">*/}
+                    {/*    <span className="tooltip" data-tooltip = {currentActivity?.activityDescription ?? "Just Begin"} >?</span>*/}
+                    {/*</div>*/}
                     {currentActivity && (
                         <ActivityItem
                             activity={currentActivity}
+                            activeRoutine={activeRoutine}
                             isRunning={isRunning}
                             elapsedTime={elapsedTime}
                             displayTime={getDisplayTime()}
@@ -152,12 +161,12 @@ const ActiveRoutine = ( {activeRoutine= {}, resetActiveRoutine = () => {} } ) =>
                             onCompleteActivity={handleCompleteActivity}
                             onSkipActivity={handleSkipActivity}
                         />
-                    )} 
-                </div> 
-                
+                    )}
+                </div>
+
             )}
-            { activateCelebration ? 
-            <div className="activityReport">
+            {activateCelebration ?
+                <div className="activityReport">
                 <div className="marquee">
                     <div className="marqueeblur" aria-hidden="true">
                         <p className="marqueetext">Activity Logs:</p>

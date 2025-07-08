@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ActiveRoutine from './ActiveRoutine';
 import'./ActivityItem.css';
 
-const ActivityItem = ({ activity, isRunning, elapsedTime, displayTime, onPause, onResume, onMoveToLast, onCompleteActivity, onSkipActivity }) => {
+const ActivityItem = ({ activity, isRunning, elapsedTime, displayTime, onPause, onResume, onMoveToLast, onCompleteActivity, onSkipActivity, activeRoutine }) => {
     const totalSeconds = Math.floor(elapsedTime / 1000);
     const expectedSeconds = activity?.duration * 60 || 0;
     const extraTime = totalSeconds > expectedSeconds ? totalSeconds - expectedSeconds : 0;
@@ -14,13 +14,19 @@ const ActivityItem = ({ activity, isRunning, elapsedTime, displayTime, onPause, 
   return (
       <div className="activityClass" >
           <div className="activityBlock" >
-              <div className="activityName" >
-                  <div className="activityMains neone">{activity.activityname}
-                      <span>{activity.activityname}</span>
-                      <span>{activity.activityname}</span>
-                      <span>You can do It</span>
-                  </div>
-              </div>
+          
+                  {/*{   */}
+                  {/*    activeRoutine?.displayDetails !== 0 ? (*/}
+                  {/*    <div className="activityName" >*/}
+                  {/*        <div className="activityMains neone">{activity.activityname}*/}
+                  {/*            <span>{activity.activityname}</span>*/}
+                  {/*            <span>{activity.activityname}</span>*/}
+                  {/*            <span>You can do It</span>*/}
+                  {/*        </div>*/}
+                  {/*    </div> ) : null*/}
+                  {/*}  */}
+                
+           
           </div>
           <div className="gifClass" >
               <img src={activity?.activityimage || require('./activityimages/meditation.gif')} alt="React Image" className="gifImage" />

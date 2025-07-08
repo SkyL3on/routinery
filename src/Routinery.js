@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import ActiveRoutine from './ActiveRoutine';
+import DiceGame from "./DiceGame";
 import'./Routinery.css';
 
 
 const Routinery = () => {
-  const [activeRoutine, setActiveRoutine] = useState(0)
+  const [activeRoutine, setActiveRoutine] = useState({});
+  const [isHomePage, setIsHomePage] = useState(true);
+  const [rolling, setRolling] = useState(true);
+  const [currentMode, setCurrentMode] = useState("homepage");
+  
+  console.log(activeRoutine, "active routine")
+  
   
   useEffect(() => {
-  }, []);
+    setCurrentMode("homepage")
+  },[]);
+  
   function getRandomNumber(max) {
     // Ensure max is a positive integer for valid random number generation.
     // Although for this specific request, max is fixed at 100.
@@ -38,49 +47,79 @@ const Routinery = () => {
     return require(`./motivation/motivation${randomNumber}.gif`);
     //${randomNumber}
   }
+
+  const rollRoutines = [
+    {
+      routine: "-----------------Meditate-----------------",
+      weight: 1,
+      displayDetails: 0,
+      activity: [
+        { activityname: "Meditate", activityDescription:"Just do it" ,duration: 1, rollEvent: 1, activityimage: generateMotivationImageURL()},
+      ]
+    },
+    {
+      routine: "-----------------Yoga-----------------",
+      weight: 1,
+      displayDetails: 0,
+      activity: [
+        { activityname: "Yoga",  activityDescription:"Just do it 2",duration: 1, rollEvent: 1, activityimage: generateMotivationImageURL()},
+      ]
+    },
+    {
+      routine: "-----------------Exercise-----------------",
+      weight: 1,
+      displayDetails: 0,
+      activity: [
+        { activityname: "Exercise", duration: 1, rollEvent: 1, activityimage: generateMotivationImageURL() },
+      ]
+    },
+      
+  ];
+  
   const Routines = [
     {
       routine: "-----------------Booosters-----------------",
+      rollEvent: 1,
       activity: [
-        { activityname: "Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif')},
+        { activityname: "Take a Deep Breath",activityDescription:"Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif'), displayDetails: 0},
       ]
     },
-    {
-      routine: "HyperFocuss OUT ROUTINE",
-      activity: [
-        { activityname: "Close whatever you are doing", duration: 1, activityimage: require('./activityimages/shutitdown.gif')},
-        { activityname: "Take a Deep Breath, and use LLama", duration: 5, activityimage: require('./activityimages/llama.gif')},
-        { activityname: "Stand Up from your desk", duration: 1, activityimage: require('./activityimages/standup.gif')},
-        { activityname: "Make Coffee, Balcony, Ruizu,  Candles, Portal, MyNoise or Next ", duration: 20, activityimage: require('./activityimages/creative.gif')},
-        { activityname: "See DopaMenu and Tether File", duration: 2, activityimage: require('./activityimages/matrix.gif')},
-        { activityname: "Just Begin", duration: 1, activityimage: require('./activityimages/hunt.gif')},
-      ]
-    },
-    {
-      routine: "Get Going ROUTINE",
-      activity: [
-        { activityname: "Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif')},
-        { activityname: "Turn on the Lights", duration: 5, activityimage: require('./activityimages/turnonlight.gif')},
-        { activityname: "Boost Dopamine - DopaMenu, Coffee, Candles, Portal, myNoise, Ruizu Only MOtivational ", duration: 1, activityimage: require('./activityimages/turbo.gif')},
-        { activityname: "See Your Today's schedule and pick any one Task", duration: 20, activityimage: require('./activityimages/beanpick.gif')},
-        { activityname: "Just pick the smallest sub sub subset of the task, which will be a very Big Success", duration: 2, activityimage: require('./activityimages/smalltask.jpeg')},
-        { activityname: "Start Focus Timer/Focus Traveller/Forest/Casio any of which you like", duration: 1, activityimage: require('./activityimages/climb.gif')},
-        { activityname: "No Pressure for that teeny tiny task and you are done !!", duration: 20, activityimage: require('./activityimages/nopressure.gif')},
-        { activityname: "Congratulations on this victory", duration: 20, activityimage: require('./activityimages/congratsbigstep.gif')},
-      ]
-    },
+    // {
+    //   routine: "HyperFocuss OUT ROUTINE",
+    //   activity: [
+    //     { activityname: "Close whatever you are doing", duration: 1, activityimage: require('./activityimages/shutitdown.gif')},
+    //     { activityname: "Take a Deep Breath, and use LLama", duration: 5, activityimage: require('./activityimages/llama.gif')},
+    //     { activityname: "Stand Up from your desk", duration: 1, activityimage: require('./activityimages/standup.gif')},
+    //     { activityname: "Make Coffee, Balcony, Ruizu,  Candles, Portal, MyNoise or Next ", duration: 20, activityimage: require('./activityimages/creative.gif')},
+    //     { activityname: "See DopaMenu and Tether File", duration: 2, activityimage: require('./activityimages/matrix.gif')},
+    //     { activityname: "Just Begin", duration: 1, activityimage: require('./activityimages/hunt.gif')},
+    //   ]
+    // },
+    // {
+    //   routine: "Get Going ROUTINE",
+    //   activity: [
+    //     { activityname: "Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif')},
+    //     { activityname: "Turn on the Lights", duration: 5, activityimage: require('./activityimages/turnonlight.gif')},
+    //     { activityname: "Boost Dopamine - DopaMenu, Coffee, Candles, Portal, myNoise, Ruizu Only MOtivational ", duration: 1, activityimage: require('./activityimages/turbo.gif')},
+    //     { activityname: "See Your Today's schedule and pick any one Task", duration: 20, activityimage: require('./activityimages/beanpick.gif')},
+    //     { activityname: "Just pick the smallest sub sub subset of the task, which will be a very Big Success", duration: 2, activityimage: require('./activityimages/smalltask.jpeg')},
+    //     { activityname: "Start Focus Timer/Focus Traveller/Forest/Casio any of which you like", duration: 1, activityimage: require('./activityimages/climb.gif')},
+    //     { activityname: "No Pressure for that teeny tiny task and you are done !!", duration: 20, activityimage: require('./activityimages/nopressure.gif')},
+    //     { activityname: "Congratulations on this victory", duration: 20, activityimage: require('./activityimages/congratsbigstep.gif')},
+    //   ]
+    // },
     {
       routine: "Motivation ROUTINE",
       activity: [
-        { activityname: "You spend around 3 whole days per month on Digital Consumption", duration: 1, activityimage: require('./activityimages/consumes.gif')},
-        { activityname: "It will never be Enough", duration: 5, activityimage: require('./activityimages/neverenough.gif')},
-        { activityname: "The Pain of Discipline or Pain of Regret", duration: 1, activityimage: require('./activityimages/tough.gif')},
-        { activityname: "Guilt or Pride", duration: 20, activityimage: require('./activityimages/guiltorpride.gif')},
-        { activityname: "Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", duration: 2, activityimage: require('./activityimages/biggestfan.gif')},
-        { activityname: "Remember Time is a zero Sum Game, Opportunities knock for limited time only", duration: 1, activityimage: require('./activityimages/eminem-lose-yourself.gif')},
-        { activityname: "Somebody Somewhere is working to get that Seat and There are only 70 ", duration: 20, activityimage: require('./activityimages/ias.gif')},
-        { activityname: "It's a Game of survival !! HUnt Or be Hunted", duration: 20, activityimage: require('./activityimages/survival.gif')},
-        { activityname: "Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", duration: 20, activityimage: require('./activityimages/eagle.gif')},
+        { activityname: "You spend around 3 whole days per month on Digital Consumption", activityDescription: "You spend around 3 whole days per month on Digital Consumption", duration: 1, activityimage: require('./activityimages/consumes.gif')},
+        { activityname: "It will never be Enough", activityDescription:"It will never be Enough", duration: 5, activityimage: require('./activityimages/neverenough.gif')},
+        { activityname: "The Pain of Discipline or Pain of Regret", activityDescription:"The Pain of Discipline or Pain of Regret", duration: 1, activityimage: require('./activityimages/tough.gif')},
+        { activityname: "Guilt or Pride", activityDescription:"Guilt or Pride", duration: 20, activityimage: require('./activityimages/guiltorpride.gif')},
+        { activityname: "Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", activityDescription:"Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", duration: 2, activityimage: require('./activityimages/biggestfan.gif')},
+        { activityname: "Remember Time is a zero Sum Game, Opportunities knock for limited time only", activityDescription:"Remember Time is a zero Sum Game, Opportunities knock for limited time only", duration: 1, activityimage: require('./activityimages/eminem-lose-yourself.gif')},
+        { activityname: "Somebody Somewhere is working to get that Seat and There are only 70 ", activityDescription:"Somebody Somewhere is working to get that Seat and There are only 70", duration: 20, activityimage: require('./activityimages/ias.gif')},
+        { activityname: "It's a Game of survival !! HUnt Or be Hunted", activityDescription:"It's a Game of survival !! HUnt Or be Hunted", duration: 20, activityimage: require('./activityimages/survival.gif')},
+        { activityname: "Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", activityDescription:"Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", duration: 20, activityimage: require('./activityimages/eagle.gif')},
       ]
     },
     {
@@ -90,7 +129,7 @@ const Routinery = () => {
       ]
     },
     {
-      routine: "Morning Routine",
+      routine: "Wake Up Routine",
       activity: [
         //{ activityname: "Drink Water", duration: 1, activityimage: require('./activityimages/drinkwater.gif')}, 
         // { activityname: "KapalBhati and Bhastrika", duration: 2, activityimage: require('./activityimages/pranayama.gif')},
@@ -100,49 +139,54 @@ const Routinery = () => {
         { activityname: "Wear a watch ?", duration: 2, activityimage: generateMotivationImageURL()},
         { activityname: "Go see Some Sunlight and have a walk", duration: 20, activityimage: require('./activityimages/sunlight.gif')},
          { activityname: "Skipping Time ( 5 Times )", duration: 1, activityimage: generateMotivationImageURL()},
-         { activityname: "Meditate using App", duration: 15, activityimage: require('./activityimages/pranayama.gif')},
+         // { activityname: "Meditate using App", duration: 15, activityimage: require('./activityimages/pranayama.gif')},
         { activityname: "Check Reminders, Calender -  Pencil Pro/Pocket", duration: 15, activityimage: generateMotivationImageURL()},
-        { activityname: "Breakfast at 12 PM", duration: 1, activityimage: require('./activityimages/getstarted.gif')},
+        // { activityname: "Breakfast at 12 PM", duration: 1, activityimage: require('./activityimages/getstarted.gif')},
+        { activityname: "MIlk, Makhane, Nuts, Seeds, SeaCod, Biscuits", duration: 20, activityimage: generateMotivationImageURL()},
+        { activityname: "Just Begin with the Class", duration: 15, activityimage: generateMotivationImageURL()},
       ]
     },
+      
     {
       routine: "Lunch Routine",
       activity: [
         //{ activityname: "Start a 30 Min Timer", duration: 20, activityimage: require('./activityimages/timer.gif')},
-       { activityname: "Firspost, NewsPaper and CA Filling", duration: 1, activityimage: generateMotivationImageURL()},
-        { activityname: "Check Stock Market", duration: 10, activityimage: generateMotivationImageURL()},
-        { activityname: "MIlk, Makhane, Nuts, Seeds, SeaCod, Biscuits", duration: 20, activityimage: generateMotivationImageURL()},
-       { activityname: "Resume at 2 ", duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Start a 2 hour Long Journey in the Focus Travellor", duration: 5, activityimage: generateMotivationImageURL()},
+       { activityname: "Have Lunch and watch Firspost", duration: 60, activityimage: generateMotivationImageURL()},
+        { activityname: "Read Newspaper ", duration: 30, activityimage: generateMotivationImageURL()},
+        { activityname: "File appropriately from FirstPost, Newspaper, Grok, Telegram ", duration: 60, activityimage: generateMotivationImageURL()},
+        { activityname: "Watch Sunset or Coffee ?", duration: 15, activityimage: generateMotivationImageURL()},
+        { activityname: "Enjoy your Free Time", duration: 1, activityimage: generateMotivationImageURL()},
        // { activityname: "Call for Breakfast", duration: 2, activityimage: require('./activityimages/calldinner.gif')},
       //  { activityname: "Respect the Timer and Enjoy the Breakfast ", duration: 1, activityimage: require('./activityimages/respect.gif')},
       ]
     },
-    {
-      routine: "Evening Routine",
-      activity: [
-       { activityname: "Yoga Nidra and Make Coffee", duration: 20, activityimage: generateMotivationImageURL()},
-       { activityname: "Do Yoga if Possible,Postures, Keep it Simple", duration: 10, activityimage: generateMotivationImageURL()},
-       { activityname: "Watch Sunset, Surbhi, Music, Trataka", duration: 15, activityimage: generateMotivationImageURL()},
-       { activityname: "Back By 8 PM", duration: 2, activityimage: generateMotivationImageURL()},
-      ]
-    },
-    {
-      routine: "Dinner Routine",
-      activity: [
-       { activityname: "Exercise using App", duration: 5, activityimage: generateMotivationImageURL()}, 
-        { activityname: "Review Your Day and Plan Next", duration: 10, activityimage: require('./activityimages/dayreview.gif')},
-        // { activityname: "Plan your Next Day", duration: 5, activityimage: require('./activityimages/plannext.gif')},
-        // { activityname: "Diary", duration: 2, activityimage: require('./activityimages/diary.gif')},
-        { activityname: "Step By Step Updates in Digital Dairy", duration: 5, activityimage: require('./activityimages/updatesstep.gif')},
-        // { activityname: "Push Ups", duration: 2, activityimage: require('./activityimages/pushups.gif')},
-        // { activityname: "Squats", duration: 2, activityimage: require('./activityimages/squats.gif')},
-        // { activityname: "Call for Dinner", duration: 1, activityimage: require('./activityimages/dinnercall.gif')},
-        { activityname: "Reminder - Fill water Bottles, Guitar, Youtube, Search List, Books, Shower, Triphala and Hot waterbottle ", duration: 2, activityimage: generateMotivationImageURL()},
-        // { activityname: "Dinner Time", duration: 45, activityimage: require('./activityimages/dinnertime.gif')},
-        // { activityname: "Check Habitica, Crossy and Forest", duration: 20, activityimage: require('./activityimages/habitica.gif')},
-        { activityname: "Remember to Sleep By 12:00 AM", duration: 1, activityimage: require('./activityimages/bedtimeready.gif')},
-      ]
-    },
+    // {
+    //   routine: "Evening Routine",
+    //   activity: [
+    //    { activityname: "Yoga Nidra and Make Coffee", duration: 20, activityimage: generateMotivationImageURL()},
+    //    { activityname: "Do Yoga if Possible,Postures, Keep it Simple", duration: 10, activityimage: generateMotivationImageURL()},
+    //    { activityname: "Watch Sunset, Surbhi, Music, Trataka", duration: 15, activityimage: generateMotivationImageURL()},
+    //    { activityname: "Back By 8 PM", duration: 2, activityimage: generateMotivationImageURL()},
+    //   ]
+    // },
+    // {
+    //   routine: "Dinner Routine",
+    //   activity: [
+    //    { activityname: "Exercise using App", duration: 5, activityimage: generateMotivationImageURL()}, 
+    //     { activityname: "Review Your Day and Plan Next", duration: 10, activityimage: require('./activityimages/dayreview.gif')},
+    //     // { activityname: "Plan your Next Day", duration: 5, activityimage: require('./activityimages/plannext.gif')},
+    //     // { activityname: "Diary", duration: 2, activityimage: require('./activityimages/diary.gif')},
+    //     { activityname: "Step By Step Updates in Digital Dairy", duration: 5, activityimage: require('./activityimages/updatesstep.gif')},
+    //     // { activityname: "Push Ups", duration: 2, activityimage: require('./activityimages/pushups.gif')},
+    //     // { activityname: "Squats", duration: 2, activityimage: require('./activityimages/squats.gif')},
+    //     // { activityname: "Call for Dinner", duration: 1, activityimage: require('./activityimages/dinnercall.gif')},
+    //     { activityname: "Reminder - Fill water Bottles, Guitar, Youtube, Search List, Books, Shower, Triphala and Hot waterbottle ", duration: 2, activityimage: generateMotivationImageURL()},
+    //     // { activityname: "Dinner Time", duration: 45, activityimage: require('./activityimages/dinnertime.gif')},
+    //     // { activityname: "Check Habitica, Crossy and Forest", duration: 20, activityimage: require('./activityimages/habitica.gif')},
+    //     { activityname: "Remember to Sleep By 12:00 AM", duration: 1, activityimage: require('./activityimages/bedtimeready.gif')},
+    //   ]
+    // },
     // {
     //   routine: "Night Routine",
     //   activity: [
@@ -160,22 +204,46 @@ const Routinery = () => {
 
 
   const resetActiveRoutine = () => {
-    setActiveRoutine(0);
+    console.log()
+    setActiveRoutine({});
+    setCurrentMode("homepage")
   }
   const handleRoutineClick = (routine) => {
-    setActiveRoutine(routine) ;
+    if ( routine.rollEvent == 1 ) 
+        {
+            setCurrentMode("rolling")
+          console.log("passed here", rolling)
+    } 
+  else
+    {
+      setCurrentMode("activeRoutine")
+      setActiveRoutine(routine);
+      console.log("passed there", rolling)
+    }
+  }
+  
+  const setChampionActivity = (activity) => {
+    console.log("champions called", activity)
+    setActiveRoutine(activity);
+    setCurrentMode("activeRoutine")
+  }
+  const luckyActivity = (routine) => {
+    setActiveRoutine(routine)
   }
 // "start": "react-scripts start",
   return (
     <div className="rootdivision">
-        { !activeRoutine ? 
+        { currentMode === "homepage"   ? 
           Routines.map((select, index) => (
               <div className="routines button-30" key={index} onClick={() => handleRoutineClick(select)}>
                   {select.routine}
               </div> )
           )
-            :  <ActiveRoutine activeRoutine={activeRoutine} resetActiveRoutine={resetActiveRoutine} />
-        }
+            :  currentMode === "activeRoutine"  ?
+                <ActiveRoutine activeRoutine={activeRoutine} resetActiveRoutine={resetActiveRoutine} />
+                :
+                <DiceGame setChampionActivity = {setChampionActivity} options = {rollRoutines}    />
+        }  
     </div>
 
   );
