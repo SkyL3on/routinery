@@ -162,6 +162,96 @@
 
 }
 
+@media only screen and (max-width: 767px) {
+    /* Your mobile styles here */
+    .activityClass {
+        display: flex;
+        flex-direction: column;
+        .displayClass {
+            display: flex;
+            justify-content: space-evenly;
+            height: 60vh;
+            .gifClass{
+                /*position: relative; !* only if needed *!*/
+                /*z-index: 1;*/
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 60%;
+                /*max-height: 60%;*/
+                min-width: 60%;
+                min-height: 60%;
+                
+
+                .gifImage{
+                    /*position: relative; !* only if needed *!*/
+                    /*z-index: 1;*/
+                    max-width: 91vh;
+                    max-height:  30vh;
+                    margin-left: 10%;
+                    /*max-width: 60%;*/
+                    /*max-height: 60%;*/
+                    /*width: auto;*/
+                    /*height: auto;*/
+                    object-fit: contain; /* ensures image fits inside box without cropping */
+                    display: block;
+                    /*min-width: 28vh;*/
+                    /*min-height: 90vh;*/
+                }
+            }
+
+            .controlClass {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 6%;
+
+                .lastClass{
+                    z-index: 100;
+                    .functions{
+                        width: 102px;
+                        height: 102px;
+                        cursor: pointer;
+                    }
+                }
+
+                .functionClass {
+                    z-index: 100;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    .activityFunction{
+                        display: flex;
+
+                        .functions{
+                            max-width: 100px;
+                            max-height: 100px;
+                            cursor: pointer;
+                        }
+                    }
+                    .done{
+                    }
+                }
+            }
+        }
+        .timeClass {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 200px;
+            .runningTime{
+                margin: 20px;
+                font-weight: 900;
+                color: #fff;
+                font-size: 32px;
+            }
+        }
+        
+    }
+
+}
+
 .neon-text {
     font-size: 32px;
     color: #fff;
