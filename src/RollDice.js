@@ -18,9 +18,9 @@ const RollDice = ({handleRoll = () => {}, randomObject = {}, rollTimes = 100, se
       setChampionActivity(randomObject);
       setBtnDisabled(false);
     }
+    Rolldice();
   });
-
-
+  
 
   const Rolldice = () => {
     handleRoll();

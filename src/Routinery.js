@@ -9,6 +9,7 @@ const Routinery = () => {
   const [isHomePage, setIsHomePage] = useState(true);
   const [rolling, setRolling] = useState(true);
   const [currentMode, setCurrentMode] = useState("homepage");
+  const [rollList, setRollList] = useState([]);
   
   console.log(activeRoutine, "active routine")
   
@@ -111,24 +112,98 @@ const Routinery = () => {
   
   const Routines = [
     {
-      routine: "-----------------Lucky Box-----------------",
+      routine: "-----------------Lucky Box-----------------", // base case for multiple weighted routines
       rollEvent: 1,
       routineType: 'rolling',
-      activity: [
-        { activityname: "Take a Deep Breath",activityDescription:"Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif'), displayDetails: 0},
+      activity:  [
+        {
+          routine: "-----------------Meditate-----------------",
+          weight: 10,
+          displayDetails: 0,
+          activity: [
+            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Small prep Step for Meditation", activityDescription:"Maybe Use DownDog App, Timer, Candles or Simple Sit on the Aasan" ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Just Start Meditation", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
+          ]
+        },
+        {
+          routine: "-----------------Yoga-----------------",
+          weight: 10,
+          displayDetails: 0,
+          activity: [
+            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Put the Chair Inside and expand Yoga Mat", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Just Start with simple Stretches", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
+          ]
+        },
+        {
+          routine: "-----------------Exercise----------------------------------",
+          weight: 10,
+          displayDetails: 0,
+          activity: [
+            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Just Start with a quick Resistance Band Routine", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
+          ]
+        },
+        {
+          routine: "-----------------Guitar----------------------------------",
+          weight: 10,
+          displayDetails: 0,
+          activity: [
+            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Just Start Playing the Guitar", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
+          ]
+        },
+        {
+          routine: "-----------------Books----------------------------------",
+          weight: 10,
+          displayDetails: 0,
+          activity: [
+            { activityname: "Pick a Book Right Now", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+            { activityname: "Just Read 2 Pages", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+          ]
+        },
+        {
+          routine: "-----------------Postures-----------------",
+          weight: 10,
+          displayDetails: 0,
+          activity: [
+            { activityname: "Wall slides" , activityDescription:", " ,duration: 2, activityimage: generateMotivationImageURL()},
+            { activityname: "Anulom Vilom", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+          ]
+        },
       ]
     },
-    // {
-    //   routine: "HyperFocuss OUT ROUTINE",
-    //   activity: [
-    //     { activityname: "Close whatever you are doing", duration: 1, activityimage: require('./activityimages/shutitdown.gif')},
-    //     { activityname: "Take a Deep Breath, and use LLama", duration: 5, activityimage: require('./activityimages/llama.gif')},
-    //     { activityname: "Stand Up from your desk", duration: 1, activityimage: require('./activityimages/standup.gif')},
-    //     { activityname: "Make Coffee, Balcony, Ruizu,  Candles, Portal, MyNoise or Next ", duration: 20, activityimage: require('./activityimages/creative.gif')},
-    //     { activityname: "See DopaMenu and Tether File", duration: 2, activityimage: require('./activityimages/matrix.gif')},
-    //     { activityname: "Just Begin", duration: 1, activityimage: require('./activityimages/hunt.gif')},
-    //   ]
-    // },
+    {
+      routine: "Need a Kick", // base case for single weighted action
+      rollEvent: 1,
+      routineType: 'rolling',
+      activity:  [
+          {weight: 10, activity: [{ activityname: "Pride or Shame" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          {weight: 10, activity: [{ activityname: "Read Bhagwat Geeta" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          {weight: 10, activity: [{ activityname: "JUST BEGIN" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          {weight: 10, activity: [{ activityname: "JUST Show up for the class" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          {weight: 10, activity: [{ activityname: "How will this impact my Journey ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          {weight: 10, activity: [{ activityname: "Remember Everyday is the Same" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Did You Seize the Day Today ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Go One Morw" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+      ]
+    },
+      
+    {
+      routine: "HyperFocuss OUT ROUTINE",
+      routineType: 'motivation',
+      activity: [
+        { activityname: "Close whatever you are doing", duration: 1, activityimage: require('./activityimages/shutitdown.gif')},
+        { activityname: "Take a Deep Breath", duration: 5, activityimage: require('./activityimages/llama.gif')},
+        { activityname: "Stand Up from your desk", duration: 1, activityimage: require('./activityimages/standup.gif')},
+        { activityname: "Turn the Lights On", duration: 2, activityimage: require('./activityimages/matrix.gif')},
+        { activityname: "Make Coffee, Balcony, Ruizu,  Candles, Portal, MyNoise or Next ", duration: 20, activityimage: require('./activityimages/creative.gif')},
+        { activityname: "Just Begin", duration: 1, activityimage: require('./activityimages/hunt.gif')},
+      ]
+    },
     // {
     //   routine: "Get Going ROUTINE",
     //   activity: [
@@ -241,12 +316,14 @@ const Routinery = () => {
   const resetActiveRoutine = () => {
     console.log()
     setActiveRoutine({});
+    setRollList([])
     setCurrentMode("homepage")
   }
   const handleRoutineClick = (routine) => {
     if ( routine.rollEvent == 1 ) 
         {
             setCurrentMode("rolling")
+          setRollList(routine?.activity)
           console.log("passed here", rolling)
     } 
   else
@@ -277,7 +354,7 @@ const Routinery = () => {
             :  currentMode === "activeRoutine"  ?
                 <ActiveRoutine activeRoutine={activeRoutine} resetActiveRoutine={resetActiveRoutine} />
                 :
-                <DiceGame setChampionActivity = {setChampionActivity} options = {rollRoutines}    />
+                <DiceGame setChampionActivity = {setChampionActivity} options = {rollList}    />
         }  
     </div>
 
