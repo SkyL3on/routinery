@@ -311,7 +311,24 @@ body {
    white-space: nowrap;
    will-change: box-shadow,transform;
    font-size: 18px;
+
  }
+.rolling {
+  color: #FCFCFD;
+  background-color: #23515A;
+  box-shadow:
+          rgba(23, 55, 61, 0.5) 0 2px 4px,        /* darker outer shadow */
+          rgba(23, 55, 61, 0.4) 0 7px 13px -3px,  /* deeper shadow */
+          #1C3F45 0 -3px 0 inset;
+}
+.motivation {
+  color: #FCFCFD;
+  background-color: #63495A;
+  box-shadow:
+          rgba(70, 45, 60, 0.5) 0 2px 4px,         /* darker soft outer shadow */
+          rgba(70, 45, 60, 0.4) 0 7px 13px -3px,   /* deeper outer shadow */
+          #503646 0 -3px 0 inset;
+}
 
 .button-30:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;

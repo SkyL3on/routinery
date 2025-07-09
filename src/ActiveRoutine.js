@@ -115,7 +115,7 @@ const ActiveRoutine = ( {activeRoutine= {}, resetActiveRoutine = () => {} } ) =>
     
     
     return (
-        <div>
+        <div className="routineBlock">
             { activateCelebration ? (
                 <div className="activate-celebration">
                     <div className="confetti"></div>
@@ -141,7 +141,7 @@ const ActiveRoutine = ( {activeRoutine= {}, resetActiveRoutine = () => {} } ) =>
                 <div className="activeRoutine">
                     <div className="routineName">
                         
-                        <span className="tooltip">{routine.routine}<span className="tooltip-text">{currentActivity?.activityDescription ?? "Just Begin"}</span></span>
+                        <span className="tooltip">{currentActivity?.activityname}<span className="tooltip-text">{currentActivity?.activityDescription ?? "Just Begin"}</span></span>
                         {/*<span className="tooltip"*/}
                         {/*      data-tooltip={currentActivity?.activityDescription ?? "Just Begin"}>?</span>*/}
                     </div>

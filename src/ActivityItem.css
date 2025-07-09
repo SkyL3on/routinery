@@ -1,9 +1,91 @@
 .activityClass {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    .displayClass {
+        display: flex;
+        justify-content: space-evenly;
+        height: 60vh;
+        .gifClass{
+            /*position: relative; !* only if needed *!*/
+            /*z-index: 1;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 60%;
+            /*max-height: 60%;*/
+            min-width: 60%;
+            min-height: 60%;
+            
+            .gifImage{
+                /*position: relative; !* only if needed *!*/
+                /*z-index: 1;*/
+                max-width: 91vh;
+                max-height:  60vh;
+                /*max-width: 60%;*/
+                /*max-height: 60%;*/
+                /*width: auto;*/
+                /*height: auto;*/
+                object-fit: contain; /* ensures image fits inside box without cropping */
+                display: block;
+                /*min-width: 28vh;*/
+                /*min-height: 90vh;*/
+            }
+        }
+
+        .controlClass {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 6%;
+
+            .lastClass{
+                z-index: 100;
+                .functions{
+                    width: 102px;
+                    height: 102px;
+                    cursor: pointer;
+                }
+            }
+
+            .functionClass {
+                z-index: 100;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .activityFunction{
+                    display: flex;
+
+                    .functions{
+                        max-width: 100px;
+                        max-height: 100px;
+                        cursor: pointer;
+                    }
+                }
+                .done{
+                }
+            }
+        }
+    }
+    .timeClass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 200px;
+        .runningTime{
+            margin: 20px;
+            font-weight: 900;
+            color: #fff;
+            font-size: 32px;
+        }
+    }
+
+    
+    
+    
     .activityBlock {
         display:  flex;
+
         .activityName {
             position: fixed;
             /*left: 19%;*/
@@ -74,61 +156,10 @@
 
 
         }
-        .gifClass{
-            .gifImage{
-                max-width: 200px;
-                max-height: 300px;
-            }
-        }
-    }
- 
-  
-    .timeClass {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 200px;
-        .runningTime{
-            margin: 20px;
-            font-weight: 900;
-            color: #fff;
-            font-size: 32px;
-        }
-    }
-    .lastClass{
-        position: relative;
-        left: 32%;
-        width: 0;
-        height: 0;
-        z-index: 100;
-        .functions{
-            position: absolute;
-            width: 125px;
-            height: 125px;
-            margin: 10px;
-            cursor: pointer;
-        }
+
+
     }
 
-    .functionClass {
-        z-index: 100;
-        display: flex;
-        justify-content: center;
-        margin-top: 65px;
-        .activityFunction{
-            display: flex;
-            
-            .functions{
-                max-width: 100px;
-                max-height: 100px;
-                margin: 10px;
-                cursor: pointer;
-            }
-        }
-        .done{
-            margin-right: -11px;
-        }
-    }
 }
 
 .neon-text {
@@ -411,7 +442,7 @@ input {
     color: #fff;
     padding: 4px 8px;
     border-radius: 4px;
-    top: 30px; /* or wherever you want it */
+    top: 10%; /* or wherever you want it */
     left: 50%;
     transform: translateX(-50%);
 }

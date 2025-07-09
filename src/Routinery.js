@@ -51,35 +51,69 @@ const Routinery = () => {
   const rollRoutines = [
     {
       routine: "-----------------Meditate-----------------",
-      weight: 1,
+      weight: 10,
       displayDetails: 0,
       activity: [
-        { activityname: "Meditate", activityDescription:"Just do it" ,duration: 1, rollEvent: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Small prep Step for Meditation", activityDescription:"Maybe Use DownDog App, Timer, Candles or Simple Sit on the Aasan" ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Just Start Meditation", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
       ]
     },
     {
       routine: "-----------------Yoga-----------------",
-      weight: 1,
+      weight: 10,
       displayDetails: 0,
       activity: [
-        { activityname: "Yoga",  activityDescription:"Just do it 2",duration: 1, rollEvent: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Put the Chair Inside and expand Yoga Mat", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Just Start with simple Stretches", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
       ]
     },
     {
-      routine: "-----------------Exercise-----------------",
-      weight: 1,
+      routine: "-----------------Exercise----------------------------------",
+      weight: 10,
       displayDetails: 0,
       activity: [
-        { activityname: "Exercise", duration: 1, rollEvent: 1, activityimage: generateMotivationImageURL() },
+        { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Just Start with a quick Resistance Band Routine", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
       ]
     },
-      
+    {
+      routine: "-----------------Guitar----------------------------------",
+      weight: 10,
+      displayDetails: 0,
+      activity: [
+        { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Just Start Playing the Guitar", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
+      ]
+    },
+    {
+      routine: "-----------------Books----------------------------------",
+      weight: 10,
+      displayDetails: 0,
+      activity: [
+        { activityname: "Pick a Book Right Now", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Just Read 2 Pages", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+      ]
+    },
+    {
+      routine: "-----------------Postures-----------------",
+      weight: 10,
+      displayDetails: 0,
+      activity: [
+        { activityname: "Wall slides" , activityDescription:", " ,duration: 2, activityimage: generateMotivationImageURL()},
+        { activityname: "Anulom Vilom", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+      ]
+    },
   ];
   
   const Routines = [
     {
-      routine: "-----------------Booosters-----------------",
+      routine: "-----------------Lucky Box-----------------",
       rollEvent: 1,
+      routineType: 'rolling',
       activity: [
         { activityname: "Take a Deep Breath",activityDescription:"Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif'), displayDetails: 0},
       ]
@@ -110,6 +144,7 @@ const Routinery = () => {
     // },
     {
       routine: "Motivation ROUTINE",
+      routineType: 'motivation',
       activity: [
         { activityname: "You spend around 3 whole days per month on Digital Consumption", activityDescription: "You spend around 3 whole days per month on Digital Consumption", duration: 1, activityimage: require('./activityimages/consumes.gif')},
         { activityname: "It will never be Enough", activityDescription:"It will never be Enough", duration: 5, activityimage: require('./activityimages/neverenough.gif')},
@@ -235,7 +270,7 @@ const Routinery = () => {
     <div className="rootdivision">
         { currentMode === "homepage"   ? 
           Routines.map((select, index) => (
-              <div className="routines button-30" key={index} onClick={() => handleRoutineClick(select)}>
+              <div   className={`routines button-30 ${select?.routineType}`} key={index} onClick={() => handleRoutineClick(select)}>
                   {select.routine}
               </div> )
           )
