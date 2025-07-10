@@ -111,84 +111,125 @@ const Routinery = () => {
   ];
   
   const Routines = [
-    {
-      routine: "-----------------Lucky Box-----------------", // base case for multiple weighted routines
-      rollEvent: 1,
-      routineType: 'rolling',
-      activity:  [
-        {
-          routine: "-----------------Meditate-----------------",
-          weight: 10,
-          displayDetails: 0,
-          activity: [
-            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Small prep Step for Meditation", activityDescription:"Maybe Use DownDog App, Timer, Candles or Simple Sit on the Aasan" ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Just Start Meditation", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
-          ]
-        },
-        {
-          routine: "-----------------Yoga-----------------",
-          weight: 10,
-          displayDetails: 0,
-          activity: [
-            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Put the Chair Inside and expand Yoga Mat", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Just Start with simple Stretches", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
-          ]
-        },
-        {
-          routine: "-----------------Exercise----------------------------------",
-          weight: 10,
-          displayDetails: 0,
-          activity: [
-            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Just Start with a quick Resistance Band Routine", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
-          ]
-        },
-        {
-          routine: "-----------------Guitar----------------------------------",
-          weight: 10,
-          displayDetails: 0,
-          activity: [
-            { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Just Start Playing the Guitar", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
-          ]
-        },
-        {
-          routine: "-----------------Books----------------------------------",
-          weight: 10,
-          displayDetails: 0,
-          activity: [
-            { activityname: "Pick a Book Right Now", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
-            { activityname: "Just Read 2 Pages", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
-          ]
-        },
-        {
-          routine: "-----------------Postures-----------------",
-          weight: 10,
-          displayDetails: 0,
-          activity: [
-            { activityname: "Wall slides" , activityDescription:", " ,duration: 2, activityimage: generateMotivationImageURL()},
-            { activityname: "Anulom Vilom", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
-          ]
-        },
-      ]
-    },
+    // {
+    //   routine: "-----------------Lucky Box-----------------", // base case for multiple weighted routines
+    //   rollEvent: 1,
+    //   routineType: 'rolling',
+    //   activity:  [
+    //     {
+    //       routine: "-----------------Meditate-----------------",
+    //       weight: 10,
+    //       displayDetails: 0,
+    //       activity: [
+    //         { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Small prep Step for Meditation", activityDescription:"Maybe Use DownDog App, Timer, Candles or Simple Sit on the Aasan" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Just Start Meditation", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
+    //       ]
+    //     },
+    //     {
+    //       routine: "-----------------Yoga-----------------",
+    //       weight: 10,
+    //       displayDetails: 0,
+    //       activity: [
+    //         { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Put the Chair Inside and expand Yoga Mat", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Just Start with simple Stretches", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
+    //       ]
+    //     },
+    //     {
+    //       routine: "-----------------Exercise----------------------------------",
+    //       weight: 10,
+    //       displayDetails: 0,
+    //       activity: [
+    //         { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Just Start with a quick Resistance Band Routine", activityDescription:"Maybe Use DownDog App, or just do wall slides" ,duration: 5, activityimage: generateMotivationImageURL()},
+    //       ]
+    //     },
+    //     {
+    //       routine: "-----------------Guitar----------------------------------",
+    //       weight: 10,
+    //       displayDetails: 0,
+    //       activity: [
+    //         { activityname: "Stand Up", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Put the Chair Inside", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Just Start Playing the Guitar", activityDescription:"" ,duration: 5, activityimage: generateMotivationImageURL()},
+    //       ]
+    //     },
+    //     {
+    //       routine: "-----------------Books----------------------------------",
+    //       weight: 10,
+    //       displayDetails: 0,
+    //       activity: [
+    //         { activityname: "Pick a Book Right Now", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Just Read 2 Pages", activityDescription:", " ,duration: 1, activityimage: generateMotivationImageURL()},
+    //       ]
+    //     },
+    //     {
+    //       routine: "-----------------Postures-----------------",
+    //       weight: 10,
+    //       displayDetails: 0,
+    //       activity: [
+    //         { activityname: "Wall slides" , activityDescription:", " ,duration: 2, activityimage: generateMotivationImageURL()},
+    //         { activityname: "Anulom Vilom", activityDescription:"" ,duration: 1, activityimage: generateMotivationImageURL()},
+    //       ]
+    //     },
+    //   ]
+    // },
     {
       routine: "Need a Kick", // base case for single weighted action
       rollEvent: 1,
       routineType: 'rolling',
       activity:  [
           {weight: 10, activity: [{ activityname: "Pride or Shame" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-          {weight: 10, activity: [{ activityname: "Read Bhagwat Geeta" ,duration: 1, activityimage: generateMotivationImageURL()}]},
           {weight: 10, activity: [{ activityname: "JUST BEGIN" ,duration: 1, activityimage: generateMotivationImageURL()}]},
           {weight: 10, activity: [{ activityname: "JUST Show up for the class" ,duration: 1, activityimage: generateMotivationImageURL()}]},
           {weight: 10, activity: [{ activityname: "How will this impact my Journey ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
           {weight: 10, activity: [{ activityname: "Remember Everyday is the Same" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-        {weight: 10, activity: [{ activityname: "Did You Seize the Day Today ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "Go One Morw" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Panaromic Vision" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Seize the Day" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "If I had six hours to chop down a tree, I would spend the first four hours sharpening the axe. - Abraham Lincoln (19th Century)" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Amateurs sit and wait for inspiration, the rest of us just get up and go to work. - Stephen King " ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "You may delay, but time will not - Benjamin Franklin (18th Century)" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "We are what we repeatedly do. Excellence, then, is not an act, but a habit. - Aristotle " ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "You don't have to be Great to start but you have to start to be Great" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Be the Eminence in the Shadow : Focus on the MoonLit Only" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "When mere Crawling is the Definition of Success" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "\"If you spend too much time thinking about a thing, you'll never get it done.\" - Bruce Lee" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "The most efficient way to live reasonably is every morning to make a plan of one's day and every night to examine the results obtained.\" - Alexis Carrel (20th Century)" ,duration: 1, activityimage: generateMotivationImageURL()}]},    
+        {weight: 10, activity: [{ activityname: "\"Done is better than perfect.\" - Sheryl Sandberg (21st Century)y" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Don't count the days, make the days count.\" - Muhammad Ali (20th/21st Century)" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "काम-रूपेण कौन्तेय दुष्पुरेणनलेना च" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Look at your Family Picture !!" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          
+      ]
+    },
+    {
+      routine: "30 min - Tell me WhhaaaTTTT", // base case for single weighted action
+      rollEvent: 1,
+      routineType: 'rolling',
+      activity:  [
+        {weight: 10, activity: [{ activityname: "Learn and Practice Guitar" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Read Bhagwat Geeta" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Read a Book ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Write Mantra in Ram Book" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Need a Fidget ? Portal, MyNoise, Coffee Break, Llama Nap, Ruizo Music, Light a Candle ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Do the StandUp Routine" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Do the Sitting Routine" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Do the Resistance Band Routine" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Do the Lying Routine" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Hevy on Dumbell Routine ",duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "DownDog Chair Yoga" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "DownDog a Active Yoga Session" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "DownDog a Active Dumbell Session" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "It's Yoga Nidra Time" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "Guided Meditation" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "Trataka" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "Aum Meditation" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "A Peaceful Nap" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "Procreate some Sketching ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+            {weight: 10, activity: [{ activityname: "Anulom Vilom, KapalBhati, Bhastrika, Box Breathing" ,duration: 1, activityimage: generateMotivationImageURL()}]},
       ]
     },
       

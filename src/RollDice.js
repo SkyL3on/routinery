@@ -18,11 +18,12 @@ const RollDice = ({handleRoll = () => {}, randomObject = {}, rollTimes = 100, se
       setChampionActivity(randomObject);
       setBtnDisabled(false);
     }
-    Rolldice();
   });
   
 
-  const Rolldice = () => {
+  
+
+  const RolldiceFunction = () => {
     handleRoll();
     setBtnDisabled(true);
     clearInterval(intrvl);
@@ -44,13 +45,19 @@ const RollDice = ({handleRoll = () => {}, randomObject = {}, rollTimes = 100, se
   useEffect(() => {
     if(clickedOnRoll) {
       console.log("trigger", clickedOnRoll)
-      Rolldice()
+      RolldiceFunction()
     }
 
   },[clickedOnRoll]);
 
+  
+  useEffect(() => {
+    RolldiceFunction();
+  },[]);
+  
+  
   const dice = (
-    <div className="dice-container" onClick={Rolldice} > 
+    <div className="dice-container" onClick={RolldiceFunction} > 
       <div className={`dice face-${rollTimes ? diceFace : 0}`}>
               {rollTimes ? 
                   <>
@@ -117,7 +124,7 @@ const RollDice = ({handleRoll = () => {}, randomObject = {}, rollTimes = 100, se
       );
  
       const rollButton = (
-      <button className="dan-btn dan-btn--default" disabled={btnDisabled} onClick={Rolldice}>
+      <button className="dan-btn dan-btn--default" disabled={btnDisabled} onClick={RolldiceFunction}>
         {btnDisabled}
         Roll Dice
       </button>

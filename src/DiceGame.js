@@ -33,6 +33,7 @@ const DiceGame = ( { setChampionActivity = () => {}, options = [], setRolling = 
 
     // Clear timer on unmount
     // return () => clearTimeout(timerId);
+    handleRoll();
   }, []);
 
   const weightedRandomObject = (options) => {
