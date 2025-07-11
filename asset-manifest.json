@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/routinery/static/css/main.12c021d4.css",
-    "main.js": "/routinery/static/js/main.b72f722c.js",
+    "main.js": "/routinery/static/js/main.0051112a.js",
     "static/js/317.970199bf.chunk.js": "/routinery/static/js/317.970199bf.chunk.js",
-    "static/media/deepbreath.gif": "/routinery/static/media/deepbreath.3a1af9ad8303ef91242c.gif",
+    "static/media/compete.png": "/routinery/static/media/compete.f39b2642e552a8e53db0.png",
     "static/media/matrix.gif": "/routinery/static/media/matrix.90477685d42c4d47a387.gif",
     "static/media/motivation17.gif": "/routinery/static/media/motivation17.e78d6c5b17201ba25551.gif",
     "static/media/last.png": "/routinery/static/media/last.bb6b96b25452beb6cf68.png",
@@ -44,6 +44,7 @@
     "static/media/meditation.gif": "/routinery/static/media/meditation.47a363d3a3e0a328bfd1.gif",
     "static/media/motivation3.gif": "/routinery/static/media/motivation3.f78733e856310e14f011.gif",
     "static/media/motivation20.gif": "/routinery/static/media/motivation20.c7278f7ba7943916c988.gif",
+    "static/media/king.jpg": "/routinery/static/media/king.deb9130f488de6b9a259.jpg",
     "static/media/motivation19.gif": "/routinery/static/media/motivation19.70619d9cd4f0933ee599.gif",
     "static/media/3xhumed-Mega-Games-Pack-31-Dragon-Age-Origins-new-4.256.png": "/routinery/static/media/3xhumed-Mega-Games-Pack-31-Dragon-Age-Origins-new-4.256.a5e68bab86ed66bac0de.png",
     "static/media/motivation10.gif": "/routinery/static/media/motivation10.8f7c7b9f4dc4a4554764.gif",
@@ -53,11 +54,11 @@
     "static/media/logo.svg": "/routinery/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/routinery/index.html",
     "main.12c021d4.css.map": "/routinery/static/css/main.12c021d4.css.map",
-    "main.b72f722c.js.map": "/routinery/static/js/main.b72f722c.js.map",
+    "main.0051112a.js.map": "/routinery/static/js/main.0051112a.js.map",
     "317.970199bf.chunk.js.map": "/routinery/static/js/317.970199bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12c021d4.css",
-    "static/js/main.b72f722c.js"
+    "static/js/main.0051112a.js"
   ]
 }
