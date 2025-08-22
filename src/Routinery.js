@@ -187,7 +187,7 @@ const Routinery = () => {
           {weight: 10, activity: [{ activityname: "How will this impact my Journey ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
           {weight: 10, activity: [{ activityname: "Remember Everyday is the Same" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "Go One Morw" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-        {weight: 10, activity: [{ activityname: "Panaromic Vision" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Panoramic Vision" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "Seize the Day" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "If I had six hours to chop down a tree, I would spend the first four hours sharpening the axe. - Abraham Lincoln (19th Century)" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "Amateurs sit and wait for inspiration, the rest of us just get up and go to work. - Stephen King " ,duration: 1, activityimage: generateMotivationImageURL()}]},
@@ -202,7 +202,30 @@ const Routinery = () => {
         {weight: 10, activity: [{ activityname: "Don't count the days, make the days count.\" - Muhammad Ali (20th/21st Century)" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "काम-रूपेण कौन्तेय दुष्पुरेणनलेना च" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "Look at your Family Picture !!" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-          
+        {weight: 10, activity: [{ activityname: "You Don't Rise to your level of Discipline, you Fall to the level of your Systems" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "It may not be your fault but it’s your responsibility" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Think about if does not happen for once " ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Think of you as a observer in a tv show" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Think of you as an observer from the future" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Hell is the place where what you are meets what you could have beeen" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Do or do not there is no try" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Opportunities knock for a limited time true wisdom knows to be ready" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Bleed here, so you shan't on the BattleField" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "2 hrs Routinery Routine" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Work like a Clock" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Monk Mode" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Be a Man" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Live the Experience than daydream about it" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Addiction is a Progressive narrowing of things that bring us pleasure" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Dopamine Fast - 10 mins" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "This is your Competition !! Be RuthLess... It's a Game of Survival" ,duration: 1, activityimage: require('./activityimages/compete.png') }]},
+        {weight: 10, activity: [{ activityname: "It's a Olympic Race" ,duration: 1, activityimage: require('./activityimages/king.jpg') }]},
+        {weight: 10, activity: [{ activityname: "if you are not on the Table, you are on the Menu" ,duration: 1, activityimage: generateMotivationImageURL() }]},
+        {weight: 10, activity: [{ activityname: "If you don't plan you will part of someone else's plan" ,duration: 1, activityimage: generateMotivationImageURL() }]},
+        {weight: 10, activity: [{ activityname: "Attention is your most valuable Resource" ,duration: 1,activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Inculcate Officer like Qualities" ,duration: 1,activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Are you actively doing Answer Writing Practice ?" ,duration: 1,activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "If you spend too much time thinking about a thing, you'll never get it done. —Bruce Lee" ,duration: 1, activityimage: generateMotivationImageURL()}]},
       ]
     },
     {
@@ -221,16 +244,29 @@ const Routinery = () => {
         {weight: 10, activity: [{ activityname: "Do the Lying Routine" ,duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "Hevy on Dumbell Routine ",duration: 1, activityimage: generateMotivationImageURL()}]},
         {weight: 10, activity: [{ activityname: "DownDog Chair Yoga" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "DownDog a Active Yoga Session" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "DownDog a Active Dumbell Session" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "It's Yoga Nidra Time" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "Guided Meditation" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "Trataka" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "Aum Meditation" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "A Peaceful Nap" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "Procreate some Sketching ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-            {weight: 10, activity: [{ activityname: "Anulom Vilom, KapalBhati, Bhastrika, Box Breathing" ,duration: 1, activityimage: generateMotivationImageURL()}]},
-      ]
+        {weight: 10, activity: [{ activityname: "DownDog a Active Yoga Session" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "DownDog a Active Dumbell Session" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "It's Yoga Nidra Time" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Guided Meditation" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Trataka" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Aum Meditation" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "A Peaceful Nap" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Procreate some Sketching ?" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Balcony and Offline Music" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Watch Sunset Today ?!" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Take a Nap" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Anulom Vilom, KapalBhati, Bhastrika, Box Breathing" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+          // REwards 
+
+        {weight: 10, activity: [{ activityname: "Gintama" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Youtube" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "HIMYM" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Bro in Sim" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Reddit Time" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Youtube" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Mobile Gaming" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+        {weight: 10, activity: [{ activityname: "Outer Wilds" ,duration: 1, activityimage: generateMotivationImageURL()}]},
+  ]
     },
       
     {
@@ -258,43 +294,44 @@ const Routinery = () => {
     //     { activityname: "Congratulations on this victory", duration: 20, activityimage: require('./activityimages/congratsbigstep.gif')},
     //   ]
     // },
+    // {
+    //   routine: "Motivation ROUTINE",
+    //   routineType: 'motivation',
+    //   activity: [
+    //     { activityname: "You spend around 3 whole days per month on Digital Consumption", activityDescription: "You spend around 3 whole days per month on Digital Consumption", duration: 1, activityimage: require('./activityimages/consumes.gif')},
+    //     { activityname: "It will never be Enough", activityDescription:"It will never be Enough", duration: 5, activityimage: require('./activityimages/neverenough.gif')},
+    //     { activityname: "The Pain of Discipline or Pain of Regret", activityDescription:"The Pain of Discipline or Pain of Regret", duration: 1, activityimage: require('./activityimages/tough.gif')},
+    //     { activityname: "Guilt or Pride", activityDescription:"Guilt or Pride", duration: 20, activityimage: require('./activityimages/guiltorpride.gif')},
+    //     { activityname: "Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", activityDescription:"Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", duration: 2, activityimage: require('./activityimages/biggestfan.gif')},
+    //     { activityname: "Remember Time is a zero Sum Game, Opportunities knock for limited time only", activityDescription:"Remember Time is a zero Sum Game, Opportunities knock for limited time only", duration: 1, activityimage: require('./activityimages/eminem-lose-yourself.gif')},
+    //     { activityname: "Somebody Somewhere is working to get that Seat and There are only 70 ", activityDescription:"Somebody Somewhere is working to get that Seat and There are only 70", duration: 20, activityimage: require('./activityimages/ias.gif')},
+    //     { activityname: "It's a Game of survival !! HUnt Or be Hunted", activityDescription:"It's a Game of survival !! HUnt Or be Hunted", duration: 20, activityimage: require('./activityimages/survival.gif')},
+    //     { activityname: "Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", activityDescription:"Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", duration: 20, activityimage: require('./activityimages/eagle.gif')},
+    //   ]
+    // },
+    // {
+    //   routine: "-----------------EveryDay-----------------",
+    //   activity: [
+    //     { activityname: "Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif')},
+    //   ]
+    // },
     {
-      routine: "Motivation ROUTINE",
-      routineType: 'motivation',
-      activity: [
-        { activityname: "You spend around 3 whole days per month on Digital Consumption", activityDescription: "You spend around 3 whole days per month on Digital Consumption", duration: 1, activityimage: require('./activityimages/consumes.gif')},
-        { activityname: "It will never be Enough", activityDescription:"It will never be Enough", duration: 5, activityimage: require('./activityimages/neverenough.gif')},
-        { activityname: "The Pain of Discipline or Pain of Regret", activityDescription:"The Pain of Discipline or Pain of Regret", duration: 1, activityimage: require('./activityimages/tough.gif')},
-        { activityname: "Guilt or Pride", activityDescription:"Guilt or Pride", duration: 20, activityimage: require('./activityimages/guiltorpride.gif')},
-        { activityname: "Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", activityDescription:"Your ageing Grandparents, Parents, Your Friends and Family, Your hopes and Dreams", duration: 2, activityimage: require('./activityimages/biggestfan.gif')},
-        { activityname: "Remember Time is a zero Sum Game, Opportunities knock for limited time only", activityDescription:"Remember Time is a zero Sum Game, Opportunities knock for limited time only", duration: 1, activityimage: require('./activityimages/eminem-lose-yourself.gif')},
-        { activityname: "Somebody Somewhere is working to get that Seat and There are only 70 ", activityDescription:"Somebody Somewhere is working to get that Seat and There are only 70", duration: 20, activityimage: require('./activityimages/ias.gif')},
-        { activityname: "It's a Game of survival !! HUnt Or be Hunted", activityDescription:"It's a Game of survival !! HUnt Or be Hunted", duration: 20, activityimage: require('./activityimages/survival.gif')},
-        { activityname: "Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", activityDescription:"Listen to the Eye of the Eagle, Just Begin, cry but begin, crawl but move, Nothing else matters", duration: 20, activityimage: require('./activityimages/eagle.gif')},
-      ]
-    },
-    {
-      routine: "-----------------EveryDay-----------------",
-      activity: [
-        { activityname: "Take a Deep Breath", duration: 1, activityimage: require('./activityimages/deepbreath.gif')},
-      ]
-    },
-    {
-      routine: "Wake Up Routine",
+      routine: "Morning Routine",
       activity: [
         //{ activityname: "Drink Water", duration: 1, activityimage: require('./activityimages/drinkwater.gif')}, 
         // { activityname: "KapalBhati and Bhastrika", duration: 2, activityimage: require('./activityimages/pranayama.gif')},
         // { activityname: "Rub your palms", duration: 1, activityimage: require('./activityimages/palms.gif')},
         // { activityname: "Wash Your Face", duration: 2, activityimage: require('./activityimages/washface.gif')},
         //{ activityname: "Freshen Up, Remove your Phone and come back", duration: 20, activityimage: require('./activityimages/freshenup.gif')},
-        { activityname: "Wear a watch ?", duration: 2, activityimage: generateMotivationImageURL()},
-        { activityname: "Go see Some Sunlight and have a walk", duration: 20, activityimage: require('./activityimages/sunlight.gif')},
-         { activityname: "Skipping Time ( 5 Times )", duration: 1, activityimage: generateMotivationImageURL()},
+        { activityname: "Sit in some Sunlight", duration: 15, activityimage: generateMotivationImageURL()},
+        { activityname: "Skipping only 5 times ?", duration: 5, activityimage: require('./activityimages/sunlight.gif')},
+        { activityname: "Do all the Resistance app routines", duration: 20, activityimage: generateMotivationImageURL()},
+         { activityname: "MIlk, Makhane, Nuts, Seeds, SeaCod, Biscuits", duration: 1, activityimage: generateMotivationImageURL()},
          // { activityname: "Meditate using App", duration: 15, activityimage: require('./activityimages/pranayama.gif')},
-        { activityname: "Check Reminders, Calender -  Pencil Pro/Pocket", duration: 15, activityimage: generateMotivationImageURL()},
+        { activityname: "Plan the day - Trello, Reminders, Calender,Pencil Pro/Pocket", duration: 15, activityimage: generateMotivationImageURL()},
         // { activityname: "Breakfast at 12 PM", duration: 1, activityimage: require('./activityimages/getstarted.gif')},
-        { activityname: "MIlk, Makhane, Nuts, Seeds, SeaCod, Biscuits", duration: 20, activityimage: generateMotivationImageURL()},
-        { activityname: "Just Begin with the Class", duration: 15, activityimage: generateMotivationImageURL()},
+        { activityname: "If possible Meditate", duration: 20, activityimage: generateMotivationImageURL()},
+        { activityname: "Set a timer 15 mins from Now and Just Begin the Class ( Check GS Routine for structure and tools", duration: 15, activityimage: generateMotivationImageURL()},
       ]
     },
       
